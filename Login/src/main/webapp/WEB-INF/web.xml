@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+	id="WebApp_ID" version="4.0">
+	<display-name>Login</display-name>
+	<welcome-file-list>
+		<welcome-file>Register.html</welcome-file>
+		<welcome-file>NewFile.html</welcome-file>
+		<welcome-file>Forgotpassword.html</welcome-file>
+		<welcome-file>flight.html</welcome-file>
+		<welcome-file>filghtbook.html</welcome-file>
+		<welcome-file>index.jsp</welcome-file>
+		<welcome-file>index.htm</welcome-file>
+		<welcome-file>default.html</welcome-file>
+		<welcome-file>NewFile.jsp</welcome-file>
+		<welcome-file>default.htm</welcome-file>
+	</welcome-file-list>
+
+	<servlet>
+		<servlet-name>Register</servlet-name>
+		<servlet-class>LoginRegister.Register</servlet-class>
+	</servlet>
+
+<session-config>
+        <session-timeout>1</session-timeout>
+</session-config>
+
+
+	<servlet-mapping>
+		<servlet-name>Register</servlet-name>
+		<url-pattern>/Register</url-pattern>
+	</servlet-mapping>
+
+
+
+
+	<servlet>
+		<servlet-name>Login</servlet-name>
+		<servlet-class>LoginRegister.Log</servlet-class>
+	</servlet>
+
+
+
+	<servlet-mapping>
+		<servlet-name>Login</servlet-name>
+		<url-pattern>/Login1</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+	
+		<servlet-name>Randomotp12</servlet-name>
+		<servlet-class>LoginRegister.Randomotp</servlet-class>
+		
+	</servlet>
+
+
+
+	<servlet-mapping>
+		<servlet-name>Randomotp12</servlet-name>
+		<url-pattern>/Randomotp1</url-pattern>
+	</servlet-mapping>
+
+
+
+	<servlet>
+		<servlet-name>Searchflight1</servlet-name>
+		<servlet-class>LoginRegister.Flightbook</servlet-class>
+	</servlet>
+
+
+
+	<servlet-mapping>
+		<servlet-name>Searchflight1</servlet-name>
+		<url-pattern>/flight</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>bulk1</servlet-name>
+		<servlet-class>LoginRegister.bulkdata</servlet-class>
+
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>bulk1</servlet-name>
+		<url-pattern>/bulk</url-pattern>
+
+	</servlet-mapping>
+
+
+
+</web-app>

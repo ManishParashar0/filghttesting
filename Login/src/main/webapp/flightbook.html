@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+    @import url('https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css');
+    @import url('https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js');
+    @import url('https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js');
+    @import url('https://use.fontawesome.com/releases/v5.7.2/css/all.css');
+/* Resetting */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    
+    background-image: url("pngegg (1).png");
+      font-family: Arial;
+      background: -webkit-linear-gradient(to right, #155799, #159957);
+      background: linear-gradient(to right, #155799, #159957);
+      color: whitesmoke;
+}
+
+
+.wrapper {
+    max-width: 800px;
+    margin: 50px auto;
+    border: solid black;     
+    border-radius: 5%;
+    position: relative;
+    color: whitesmoke;
+	backdrop-filter: blur(16px) saturate(180%);
+	-webkit-backdrop-filter: blur(30px) saturate(180%);
+	background-color: rgba(94, 172, 236, 0.24);
+	border-radius: 15%;
+	border: 1px solid rgba(7, 40, 226, 0.233);
+	margin-top: 10%;
+}
+
+.wrapper form {
+    padding: 30px 50px;
+}
+
+.wrapper form .form-group {
+    padding-bottom: .5rem;
+}
+
+.wrapper form .option {
+    position: relative;
+    padding-left: 25px;
+    cursor: pointer;
+    display: block;
+}
+
+.wrapper form .option input {
+    display: none;
+}
+
+.wrapper form .checkmark {
+    position: absolute;
+    top: 4px;
+    left: 0;
+    height: 17px;
+    width: 17px;
+    background-color: #fff;
+    border: 1px solid #aaa;
+    border-radius: 50%;
+}
+
+.wrapper form .option input:checked~.checkmark:after {
+    display: block;
+}
+
+.wrapper form .option .checkmark:after {
+    content: "";
+    width: 7px;
+    height: 7px;
+    display: block;
+    border-radius: 50%;
+    background-color: #333;
+    position: absolute;
+    top: 48%;
+    left: 52%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: 200ms ease-in-out 0s;
+}
+
+.wrapper form .option:hover input[type="radio"]~.checkmark {
+    background-color: #f4f4f4;
+}
+
+.wrapper form .option input[type="radio"]:checked~.checkmark {
+    background: #fff;
+    color: #fff;
+    transition: 300ms ease-in-out 0s;
+}
+
+.wrapper form .option input[type="radio"]:checked~.checkmark:after {
+    transform: translate(-50%, -50%) scale(1);
+    color: #fff;
+}
+
+.wrapper form a {
+    color: #333;
+}
+
+.wrapper form .form-control {
+    outline: none;
+    border: none;
+}
+
+.wrapper form .form-control:focus {
+    box-shadow: none;
+}
+
+.wrapper form input[type="text"]:focus::placeholder {
+    color: transparent
+}
+
+input[type="date"] {
+    cursor: pointer;
+}
+.button{
+margin-left:30%;
+  background-color: initial;
+  background-image: linear-gradient(-180deg, #FF7E31, #E62C03);
+  border-radius: 3px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 2px 4px;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Inter,-apple-system,system-ui,Roboto,"Helvetica Neue",Arial,sans-serif;
+  height: 40px;
+  line-height: 40px;
+  outline: 0;
+  overflow: hidden;
+  padding: 0 20px;
+  pointer-events: auto;
+  position: relative;
+  text-align: center;
+  touch-action: manipulation;
+  user-select: none;
+  -webkit-user-select: none;
+  vertical-align: top;
+  white-space: nowrap;
+  width: 40%;
+  transition: box-shadow .2s;
+}
+
+.button-42:hover {
+  box-shadow: rgba(253, 76, 0, 0.5) 0 3px 8px;
+}
+
+
+
+.wrapper form .label::after {
+    position: absolute;
+    /* background-color: #fff; */
+    top: 5px;
+    left: 0px;
+    font-size: 0.9rem;
+    margin: 0rem 0.4rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08rem;
+    font-weight: 600;
+    color: rgb(0, 0, 0);
+    transition: all .2s ease-in-out;
+    transform: scale(0);
+}
+
+.wrapper form .label#from::after {
+    content: 'From';
+}
+
+.wrapper form .label#to::after {
+    content: 'To';
+}
+
+.wrapper form .label#depart::after {
+    content: 'Depart Date';
+}
+
+.wrapper form .label#return::after {
+    content: 'Return Date';
+}
+
+.wrapper form .label#psngr::after {
+    content: 'Traveller(s)';
+}
+
+.wrapper form input[type="text"]:focus~.label::after {
+    top: -15px;
+    left: 0px;
+    transform: scale(1);
+}
+
+.wrapper form input[type="date"]:focus~.label::after {
+    top: -15px;
+    left: 0px;
+    transform: scale(1);
+}
+
+/* Margin */
+.margin {
+    margin: 2rem 0rem;
+}
+
+/* Media Queries */
+@media(max-width: 575.5px) {
+    .wrapper {
+        margin: 10px;
+    }
+
+    .wrapper form {
+        padding: 20px;
+    }
+
+    .margin {
+        margin: .2rem 0rem;
+    }
+} nav {
+	width: auto;
+	margin: auto;
+	color: whitesmoke;
+	backdrop-filter: blur(16px) saturate(180%);
+	-webkit-backdrop-filter: blur(16px) saturate(180%);
+	background-color: rgba(11, 15, 13, 0.582);
+	border-radius: 12px;
+	border: 1px solid rgba(7, 6, 6, 0.125);
+	padding: 20px 25px;
+}
+    </style>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <title>Flight Booking Form</title>
+  </head>
+  <body>
+  
+   
+   <nav class="navbar navbar-expand-lg navbar-light bg-light">
+		<div class="container-fluid">
+			<button class="navbar-toggler" type="button"
+				data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03"
+				aria-controls="navbarTogglerDemo03" aria-expanded="false"
+				aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<a class="navbar-brand" href="#">FLIGHT</a>
+			<div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+				<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+					<li class="nav-item"><a class="nav-link active"
+						aria-current="page" href="#">Home</a></li>
+					<li class="nav-item"><a class="nav-link" href="#">Link</a></li>
+
+				</ul>
+				<form class="d-flex">
+					<input class="form-control me-2" type="google search" placeholder="Search"
+						aria-label="Search" name="search">
+					<button  class="btn btn-outline-success" type="button">Search</button>
+				</form>
+			</div>
+		</div>
+	</nav>
+    <form action="flight"method="post">
+    <div class="wrapper">
+    
+          <div class="form-group border-bottom d-flex align-items-center justify-content-between flex-wrap">
+              <label class="option my-sm-0 my-2">
+                  <input type="radio" name="radio" checked>Round Trip
+                  <span class="checkmark"></span>
+              </label>
+              <label class="option my-sm-0 my-2">
+                  <input type="radio" name="radio">One Way
+                  <span class="checkmark"></span>
+              </label>
+              <div class="d-flex align-items-center my-sm-0 my-2">
+                  <a href="#" class="text-decoration-none">
+                      Multi-city/Stopovers <span class="fas fa-angle-right ps-2 text-primary"></span>
+                  </a>
+              </div>
+          </div>
+          <div class="form-group d-sm-flex margin">
+              <div class="d-flex align-items-center flex-fill me-sm-1 my-sm-0 my-4 border-bottom position-relative">
+                  <input type="text" required placeholder="From" class="form-control"name="from">
+                  <div class="label" id="from"></div>
+                  <span class="fas fa-dot-circle text-muted"></span>
+              </div>
+              <div class="d-flex align-items-center flex-fill ms-sm-1 my-sm-0 my-4 border-bottom position-relative">
+                  <input type="text" required placeholder="To" class="form-control"name="where">
+                  <div class="label" id="to"></div>
+                  <span class="fas fa-map-marker text-muted"></span>
+              </div>
+          </div>
+          <div class="form-group d-sm-flex margin">
+              <div class="d-flex align-items-center flex-fill me-sm1 my-sm-0 border-bottom position-relative">
+                  <input type="date" required placeholder="Depart Date" class="form-control"name="startdate">
+                  <div class="label" id="depart"></div>
+              </div>
+              <div class="d-flex align-items-center flex-fill ms-sm-1 my-sm-0 my-4 border-bottom position-relative">
+                  <input type="date" required placeholder="Return Date" class="form-control"name="returndate">
+                  <div class="label" id="return"></div>
+              </div>
+          </div>
+          <div class="form-group border-bottom d-flex align-items-center position-relative">
+              <input type="number" required placeholder="Traveller(s)" min="1" max="5" class="form-control" name="totalpassanger">
+              <div class="label" id="psngr"></div>
+              <span class="fas fa-users text-muted"></span>
+          </div>
+          <div class="form-group my-3">
+              <div >
+              <button type="submit" class="button">Search Flights</button>
+              </div>
+          </div>
+          
+   
+
+  </div>
+     </form>
+  
+	<!-- Footer -->
+	<footer class=" text-center text-white"
+		style="background-color: #5c99b7;">
+		<!-- Grid container -->
+		<div class="container p-4">
+
+			<!-- Section: Social media -->
+			<section class="mb-4" style="margin-top: 1%">
+				
+				<!-- Google -->
+				<a class="btn btn-primary btn-floating m-1"
+					style="background-color: #dd4b39" href="https://youtube.com/@manishparashar4935" role="button"><i
+					class="fab fa-youtube"></i></a>
+
+				<!-- Instagram -->
+				<a class="btn btn-primary btn-floating m-1"
+					style="background-color: #ac2bac" href="https://instagram.com/manish_parashar__?igshid=OGQ2MjdiOTE=" role="button"><i
+					class="fab fa-instagram"></i></a>
+
+				<!-- Linkedin -->
+				<a class="btn btn-primary btn-floating m-1"
+					style="background-color: #0082ca" href="#!" role="button"><i
+					class="fab fa-linkedin-in"></i></a>
+				<!-- Github -->
+				<a class="btn btn-primary btn-floating m-1"
+					style="background-color: #333333" href="https://github.com/manish8094/Manish1.git" role="button"><i
+					class="fab fa-github"></i></a>
+			</section>
+			<!-- Section: Social media -->
+
+
+			<!-- Section: Form -->
+			<section class="">
+				<form action="">
+
+					<div class="row d-flex justify-content-center">
+
+						<div class="col-md-5 col-12">
+
+							<div class="col-auto"></div>
+							<!--Grid column-->
+						</div>
+						<!--Grid row-->
+				</form>
+			</section>
+			<!-- Section: Form -->
+
+
+			<!-- Section: Text -->
+			<section class="mb-4">
+				<p>Online Flight Reservation System is a web application that
+					helps the commuters to book flight ticket online. In order to book
+					ticket, the commuter has to register himself by filling up the
+					details. Once the user had registered himself he has to login in
+					order to book the ticket. While booking the user has to select the
+					type of airlines he will be travelling and he has to specify the
+					place he is going to travel between. According to the type of
+					airlines and place, the system will provide information regarding
+					flight and venue which are available on the date specified by the
+					Commuter. Commuter can view the reservation after booking the
+					ticket. Commuter will be able to view the details related to his
+					reservation. The System will provide notice related to flight to
+					the passengers. In Online Flight Reservation System the admin can
+					view the reservation done by the passengers and can add notice that
+					is related to flight.</p>
+			</section>
+
+			<!-- Section: Text -->
+
+
+		</div>
+
+
+		<!-- Copyright -->
+		<div class="text-center p-3" style="background-color: blue">
+			© 2022 Copyright: <a class="text-white" href="">@manish-parashar</a>
+		</div>
+		<!-- Copyright -->
+
+	</footer>
+	<!-- Footer -->
+  </body>
+</html>

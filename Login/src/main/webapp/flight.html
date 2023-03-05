@@ -1,0 +1,288 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+<!-- Required meta tags -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Bootstrap CSS -->
+<link
+	href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+	rel="stylesheet"
+	integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+	crossorigin="anonymous">
+
+<title>Flight hight</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+    @import url('https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css');
+    @import url('https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js');
+    @import url('https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js');
+    @import url('https://use.fontawesome.com/releases/v5.7.2/css/all.css');
+/* Resetting */
+
+/* CSS */
+.container {
+	margin-top: 10%;
+	display: flex;
+	align-items: center;
+	position: relative;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
+.container .box {
+	border: solid black;
+	border-radius: 15%;
+	position: relative;
+	width: 20rem;
+	height: 20rem;
+	margin: 3rem;
+	color: whitesmoke;
+	backdrop-filter: blur(16px) saturate(180%);
+	-webkit-backdrop-filter: blur(30px) saturate(180%);
+	background-color: rgba(94, 172, 236, 0.24);
+	border-radius: 15%;
+	border: 1px solid rgba(7, 40, 226, 0.233);
+}
+
+.container .box:hover .imgBox {
+	transform: translate(-4.5rem, -7.5rem);
+}
+
+.container .content {
+	opacity: 0;
+	transition: all 0.3s ease;
+}
+
+.container .box:hover .content {
+	opacity: 1;
+	transform: translate(4.10rem, 13.10rem);
+}
+
+.imgBox {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 2;
+	transition: all 0.5s ease-in-out;
+	color: whitesmoke;
+	backdrop-filter: blur(16px) saturate(180%);
+	-webkit-backdrop-filter: blur(30px) saturate(180%);
+	background-color: rgba(11, 15, 13, 0.582);
+	border-radius: 15%;
+	border: 1px solid rgba(39, 78, 187, 0.125);
+}
+
+.imgBox {
+	width: 20rem;
+	height: 20rem;
+	overflow: hidden;
+	resize: both;
+	border: solid rgb(245, 244, 244);
+	border-radius: 15%;
+}
+
+img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.button {
+	border-radius: 30px;
+	background-color: #155799, #159957;
+}
+
+body {
+	background-image: url('pngegg\ \(1\).png');
+	font-family: Arial;
+	background: -webkit-linear-gradient(to right, #155799, #159957);
+	background: linear-gradient(to right, #155799, #159957);
+	color: whitesmoke;
+}
+
+nav {
+	width: auto;
+	margin: auto;
+	color: whitesmoke;
+	backdrop-filter: blur(16px) saturate(180%);
+	-webkit-backdrop-filter: blur(16px) saturate(180%);
+	background-color: rgba(11, 15, 13, 0.582);
+	border-radius: 12px;
+	border: 1px solid rgba(7, 6, 6, 0.125);
+	padding: 20px 25px;
+}
+</style>
+
+
+</head>
+
+<body>
+<form action="">
+	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+		<div class="container-fluid">
+			<button class="navbar-toggler" type="button"
+				data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03"
+				aria-controls="navbarTogglerDemo03" aria-expanded="false"
+				aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<a class="navbar-brand" href="#">FLIGHT</a>
+			<div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+				<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+					<li class="nav-item"><a class="nav-link active"
+						aria-current="page" href="#">Home</a></li>
+					<li class="nav-item"><a class="nav-link" href="#">Link</a></li>
+
+				</ul>
+				<form class="d-flex">
+					<input class="form-control me-2" type="search" placeholder="Search"
+						aria-label="Search">
+					<button class="btn btn-outline-success" type="submit">Search</button>
+				</form>
+			</div>
+		</div>
+	</nav>
+
+	<!-- Optional JavaScript; choose one of the two! -->
+
+	<!-- Option 1: Bootstrap Bundle with Popper -->
+	<script
+		src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+		crossorigin="anonymous"></script>
+
+	<!-- Option 2: Separate Popper and Bootstrap JS -->
+	<!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    -->
+	<div class=" container">
+		<div class="box">
+			<div class="imgBox">
+				<img src="pngegg (2).png" alt="" />
+			</div>
+			<div class="content">
+				<h2>
+					<br> <span><button type="button". button1">
+							<a href="flightbook.html">BOOK Flight
+						</ButtOn></span>
+				</h2>
+			</div>
+		</div>
+		<div class="box">
+			<div class="imgBox">
+				<img src="earth.png" alt="" />
+			</div>
+			<div class="content">
+				<h2>
+					<br> <span><button class="button1">Check Out</ButtOn></span>
+				</h2>
+			</div>
+		</div>
+		<div class="box">
+			<div class="imgBox">
+				<img src="pngegg (4).png" alt="" />
+			</div>
+			<div class="content">
+				<h2>
+					<br> <span><button class="button1">
+							<a href="https://www.flightradar24.com/19.07,72.89/6"
+								target="_blank">Track Flight
+						</ButtOn></span>
+
+				</h2>
+			</div>
+		</div>
+	</div>
+
+<!-- Footer -->
+	<footer class=" text-center text-white"
+		style="background-color: #5c99b7;">
+		<!-- Grid container -->
+		<div class="container p-4">
+
+			<!-- Section: Social media -->
+			<section class="mb-4" style="margin-top: 1%">
+				
+				<!-- Google -->
+				<a class="btn btn-primary btn-floating m-1"
+					style="background-color: #dd4b39" href="https://youtube.com/@manishparashar4935" role="button"><i
+					class="fab fa-youtube"></i></a>
+
+				<!-- Instagram -->
+				<a class="btn btn-primary btn-floating m-1"
+					style="background-color: #ac2bac" href="https://instagram.com/manish_parashar__?igshid=OGQ2MjdiOTE=" role="button"><i
+					class="fab fa-instagram"></i></a>
+
+				<!-- Linkedin -->
+				<a class="btn btn-primary btn-floating m-1"
+					style="background-color: #0082ca" href="#!" role="button"><i
+					class="fab fa-linkedin-in"></i></a>
+				<!-- Github -->
+				<a class="btn btn-primary btn-floating m-1"
+					style="background-color: #333333" href="https://github.com/manish8094/Manish1.git" role="button"><i
+					class="fab fa-github"></i></a>
+			</section>
+			<!-- Section: Social media -->
+
+
+			<!-- Section: Form -->
+			<section class="">
+				<form action="">
+
+					<div class="row d-flex justify-content-center">
+
+						<div class="col-md-5 col-12">
+
+							<div class="col-auto"></div>
+							<!--Grid column-->
+						</div>
+						<!--Grid row-->
+				</form>
+			</section>
+			<!-- Section: Form -->
+
+
+			<!-- Section: Text -->
+			<section class="mb-4">
+				<p>Online Flight Reservation System is a web application that
+					helps the commuters to book flight ticket online. In order to book
+					ticket, the commuter has to register himself by filling up the
+					details. Once the user had registered himself he has to login in
+					order to book the ticket. While booking the user has to select the
+					type of airlines he will be travelling and he has to specify the
+					place he is going to travel between. According to the type of
+					airlines and place, the system will provide information regarding
+					flight and venue which are available on the date specified by the
+					Commuter. Commuter can view the reservation after booking the
+					ticket. Commuter will be able to view the details related to his
+					reservation. The System will provide notice related to flight to
+					the passengers. In Online Flight Reservation System the admin can
+					view the reservation done by the passengers and can add notice that
+					is related to flight.</p>
+			</section>
+
+			<!-- Section: Text -->
+
+
+		</div>
+
+
+		<!-- Copyright -->
+		<div class="text-center p-3" style="background-color: blue">
+			© 2022 Copyright: <a class="text-white" href="">@manish-parashar</a>
+		</div>
+		<!-- Copyright -->
+
+	</footer>
+	<!-- Footer -->
+	</form>
+</body>
+
+</html>
